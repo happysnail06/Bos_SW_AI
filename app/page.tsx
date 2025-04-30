@@ -317,7 +317,7 @@ export default function InsuranceSimulationKoreanPage() { // Changed function na
                 <p>
                   BoS는{" "}
                   <span className="font-semibold text-brand-blue">
-                    AI 기반 상담 전략 설계 도우미
+                    AI 기반 보험 상담 전략 설계 도우미
                   </span>
                   입니다.
                 </p>
@@ -384,14 +384,18 @@ export default function InsuranceSimulationKoreanPage() { // Changed function na
                   </h3>
                   <p className="relative z-10 text-base leading-relaxed font-serif text-gray-700">
                     <span className="block">
-                      실제 고객 데이터를 바탕으로 다양한 유저 페르소나를 모델링하고,
+                      실제 고객 데이터를 바탕으로 다양한
                     </span>
                     <span className="block">
-                      보험 상담 전략을 에이전트에
+                      가상 고객을 생성하고, 이들과의 상담을 
                     </span>
                     <span className="block">
-                      학습시켜 전략을 검증합니다.
+                      AI가 자연스럽게 시뮬레이션하여
                     </span>
+                    <span className="block">
+                      설득 전략에 대한 구체적인 노하우를 
+                    </span>
+                    <span className="block">제공합니다.</span>
                   </p>
                   <span className="
                     absolute bottom-4 right-4 z-10 flex items-center
