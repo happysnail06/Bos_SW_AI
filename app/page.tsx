@@ -297,7 +297,7 @@ export default function InsuranceSimulationKoreanPage() { // Changed function na
                       실제 고객 데이터를 바탕으로 다양한 유저 페르소나를 모델링하고,
                     </span>
                     <span className="block">
-                      보험사 상품을 에이전트에
+                      보험 상담 전략을 에이전트에
                     </span>
                     <span className="block">
                       학습시켜 전략을 검증합니다.
@@ -329,10 +329,10 @@ export default function InsuranceSimulationKoreanPage() { // Changed function na
                   </h3>
                   <p className="relative z-10 text-base leading-relaxed font-serif text-gray-700">
                     <span className="block">
-                      상담 시나리오 반복 시뮬레이션으로 고객 유형별 최적 상담 전략을 AI가 도출하고, 상품 반응, 
+                      상담 시나리오 반복 시뮬레이션으로 고객 유형별 최적 상담 전략을 AI가 도출하고, 상품 반응, 설득률 등을 정량
                     </span>
                     <span className="block">
-                      설득률 등을 정량 평가합니다.
+                       평가합니다.
                     </span>
                   </p>
                   <span className="
@@ -361,10 +361,7 @@ export default function InsuranceSimulationKoreanPage() { // Changed function na
                   </h3>
                   <p className="relative z-10 text-base leading-relaxed font-serif text-gray-700">
                     <span className="block">
-                      리스크 관리와 언더라이팅 효율을 최적화하여 전환율 및 고객 만족도를 동시에 높여, 기업 성과를
-                    </span>
-                    <span className="block">
-                       극대화합니다.
+                      리스크 관리와 언더라이팅 효율을 최적화하여 전환율 및 고객 만족도를 동시에 높여, 기업 성과를 극대화합니다.
                     </span>
                   </p>
                   <span className="
