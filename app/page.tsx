@@ -558,7 +558,7 @@ export default function InsuranceSimulationKoreanPage() { // Changed function na
               <div className="md:w-1/2 flex flex-col">
                 <h2 className="text-4xl md:text-5xl font-bold font-serif mb-2 text-left">관심 등록</h2>
                 <p className="text-left text-base text-gray-700 mt-3 mb-0 ml-4 leading-relaxed">
-                  업데이트된 소식을 받아보세요!
+                  해당 서비스가 궁금하신가요? 최신 소식을 가장 먼저 받아보세요!
                 </p>
                 <form onSubmit={handleRegisterSubmit} className="mt-4 space-y-6 text-left flex flex-col flex-grow">
                   <input 
