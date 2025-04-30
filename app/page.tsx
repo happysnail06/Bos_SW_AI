@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react'; // Import useState and useEffect
 import Image from 'next/image';
-import { ArrowRight, UsersRound, BrainCircuit, TrendingUp } from 'lucide-react';
+import { ArrowRight, UsersRound, BrainCircuit, TrendingUp, MessageSquare, UserCheck } from 'lucide-react';
+import { motion } from "framer-motion"; // Added framer-motion
 import ChatSimulator from '@/components/ChatSimulator'; // Assuming component paths remain the same
 import InsightsDashboardAnimation from '@/components/InsightsDashboardAnimation'; // Assuming component paths remain the same
 import DemoRequestButton from '@/components/DemoRequestButton'; // Import the new component
@@ -12,8 +13,12 @@ import { RevolvingDot } from 'react-loader-spinner'; // Import the spinner
 // --- FAQ 데이터 (한국어) ---
 const faqs = [
   {
+    question: "대화 시뮬레이션은 무엇인가요?",
+    answer: "AI가 실제 고객과 상담사 역할을 하면서 대화를 주고받는 모의 상담이에요.일상 대화처럼 자연스럽게 진행되는 상담 대화를 재현합니다."
+  },
+  {
     question: "BoS는 대화를 어떻게 모델링하나요?",
-    answer: "저희는 보험 시나리오에 대해 훈련된 고급 AI 언어 모델을 사용하여 정의된 페르소나와 목표에 따라 현실적인 에이전트와 고객 대화를 시뮬레이션합니다.",
+    answer: "저희는 보험 설계 전략을 학습한 AI 에이전트와, 다양한 페르소나로 모델링된 고객 시뮬레이터를 활용해, 현실적인 보험 상담 시나리오를 유연하게 시뮬레이션할 수 있습니다.",
   },
   {
     question: "보험 에이전트와 고객 페르소나를 맞춤 설정할 수 있나요?",
@@ -275,9 +280,94 @@ export default function InsuranceSimulationKoreanPage() { // Changed function na
 
           <section id="description" className="max-w-6xl mx-auto px-6 py-12 md:py-16">
             <h2 className="text-3xl md:text-4xl font-bold font-serif mb-12 text-center">"고객 설득? 이제 AI가 도와드립니다."</h2> 
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-              
+
+            {/* Glassmorphic Card Start */}
+            <div className="relative max-w-4xl mx-auto p-8 bg-white/20 backdrop-blur-md rounded-2xl shadow-lg overflow-hidden border border-gray-200/50 transition duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl">
+              {/* Decorative SVG Blobs */}
+              <svg
+                className="absolute -top-16 -left-16 w-56 h-56 opacity-10 text-brand-blue"
+                viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="currentColor"
+                  d="M43.2,-72.7C57.7,-67.4,71.1,-57.3,77.6,-43.2C84,-29.2,83.5,-11.6,77.4,4.7C71.3,21.1,59.6,35.4,46,47.6C32.5,59.7,17.2,69.8,0.3,69.1C-16.6,68.3,-33.3,56.6,-48.6,45.1C-63.8,33.7,-77.6,22.6,-81.2,8.9C-84.8,-5,-78.2,-21,-67.9,-32.8C-57.6,-44.6,-43.7,-52.2,-29.5,-57.8C-15.3,-63.4,-7.7,-66.9,6.3,-76.3C20.3,-85.6,40.7,-100,43.2,-72.7Z"
+                  transform="translate(100 100)"
+                />
+              </svg>
+              <svg
+                className="absolute -bottom-16 -right-16 w-72 h-72 opacity-10 text-brand-cyan"
+                viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="currentColor"
+                  d="M33.3,-58.1C47.8,-49.9,65.6,-44,71.7,-32.2C77.8,-20.4,72.1,-2.8,65.2,12.3C58.2,27.3,49.9,38.6,38.9,48.8C27.9,59.1,14,68.2,-0.6,69.1C-15.1,69.9,-30.2,62.6,-43.1,52C-56,41.3,-66.8,27.4,-72.5,11.3C-78.3,-4.8,-79.1,-23.1,-69.3,-36.9C-59.5,-50.7,-39,-60.1,-18.2,-64.3C2.7,-68.5,25.5,-67.9,33.3,-58.1Z"
+                  transform="translate(100 100)"
+                />
+              </svg>
+
+              {/* Animated Paragraph */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="relative text-center text-lg text-gray-700 max-w-3xl mx-auto font-serif space-y-3"
+              >
+                <p>
+                  BoS는{" "}
+                  <span className="font-semibold text-brand-blue">
+                    AI 기반 상담 전략 설계 도우미
+                  </span>
+                  입니다.
+                </p>
+                <p>
+                  고객 응대가 막막할 때, 어떤 말로 시작하고 어떻게 설득해야 할지 고민되시나요?
+                </p>
+                <p>
+                  BoS는 다양한 유형의 가상 고객과의 상담을 AI가 자연스럽게
+                  시뮬레이션하고, 그 대화를 분석해 실제 상황에서 어떤 대화 방식과 설득 전략이 효과적인지
+                  구체적인 노하우를 제공합니다.
+                </p>
+                <p>
+                  어려운 고객 응대도, BoS와 함께라면 자신 있게 대응할 수 있습니다.
+                </p>
+              </motion.div>
+
+              {/* Icon-Enhanced Bullet List */}
+              <motion.ul
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="relative mt-8 space-y-4 max-w-2xl mx-auto text-gray-700"
+              >
+                <li className="flex items-start">
+                  <MessageSquare className="w-5 h-5 text-brand-cyan mt-1 mr-3 flex-shrink-0" />
+                  <span>막막한 고객 응대, 첫 문장부터 설득 포인트까지 한눈에!</span>
+                </li>
+                <li className="flex items-start">
+                  <UserCheck className="w-5 h-5 text-brand-blue mt-1 mr-3 flex-shrink-0" />
+                  <span>다양한 고객 유형별 상담 시나리오로 전략의 강·약점을 분석합니다.</span>
+                </li>
+                <li className="flex items-start">
+                  <TrendingUp className="w-5 h-5 text-teal-500 mt-1 mr-3 flex-shrink-0" /> 
+                  <span>실시간 데이터 기반 인사이트로 상담 성공률을 극대화하세요.</span>
+                </li>
+              </motion.ul>
+
+              {/* Call-to-Action Button */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                className="relative mt-10 text-center"
+              >
+               
+              </motion.div>
+            </div>
+            {/* Glassmorphic Card End */}
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-16"> {/* Added margin-top */}              
             {/* Card 1 */}
             <div className="
                   relative overflow-hidden rounded-2xl p-12
@@ -329,10 +419,16 @@ export default function InsuranceSimulationKoreanPage() { // Changed function na
                   </h3>
                   <p className="relative z-10 text-base leading-relaxed font-serif text-gray-700">
                     <span className="block">
-                      상담 시나리오 반복 시뮬레이션으로 고객 유형별 최적 상담 전략을 AI가 도출하고, 상품 반응, 설득률 등을 정량
+                      상담 시나리오 시뮬레이션으로 고객
                     </span>
                     <span className="block">
-                       평가합니다.
+                       유형별 최적 상담 전략을 AI가 도출하고,
+                    </span>
+                    <span className="block">
+                        상품 반응, 설득률 등을 정량
+                    </span>
+                    <span className="block">
+                        평가합니다.
                     </span>
                   </p>
                   <span className="
