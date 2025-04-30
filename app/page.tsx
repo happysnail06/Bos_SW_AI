@@ -315,7 +315,7 @@ export default function InsuranceSimulationKoreanPage() { // Changed function na
                 className="relative text-center text-lg text-gray-700 max-w-3xl mx-auto font-serif space-y-3"
               >
                 <p>
-                  BoS는{" "}
+                  BoS는 보험 설계사 및 상담사를 위한{" "}
                   <span className="font-semibold text-brand-blue">
                     AI 기반 보험 상담 전략 설계 도우미
                   </span>
