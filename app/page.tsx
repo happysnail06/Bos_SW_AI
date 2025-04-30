@@ -31,10 +31,6 @@ const faqs = [
     question: "실제 고객 응대에 바로 활용 가능한 인사이트를 얻을 수 있나요?",
     answer: "네. 시뮬레이션 결과는 실제 상담 전략 개선에 바로 적용할 수 있도록 설계되었습니다. BoS는 고객 유형별로 효과적인 응대 전략과 실패 요인을 자동으로 비교 분석하여, 각 페르소나에 최적화된 실질적인 개선 가이드를 제공합니다.",
   },
-  {
-    question: "기존의 역할 연기와 어떻게 다른가요?",
-    answer: "BoS는 확장 가능하고 일관되며 데이터 기반의 연습을 제공합니다. AI는 더 넓은 범위의 고객 유형을 시뮬레이션하고 인간 주도의 역할 연기와 달리 객관적인 성과 분석을 제공합니다.",
-  },
 ];
 
 export default function InsuranceSimulationKoreanPage() { // Changed function name for clarity
