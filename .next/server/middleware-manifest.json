@@ -2,34 +2,15 @@
   "version": 3,
   "middleware": {},
   "functions": {
-    "/api/chat/route": {
-      "files": [
-        "server/middleware-build-manifest.js",
-        "server/middleware-react-loadable-manifest.js",
-        "server/next-font-manifest.js",
-        "server/interception-route-rewrite-manifest.js",
-        "server/edge-runtime-webpack.js",
-        "server/app/api/chat/route.js"
-      ],
-      "name": "app/api/chat/route",
-      "page": "/api/chat/route",
-      "matchers": [
-        {
-          "regexp": "^/api/chat$",
-          "originalSource": "/api/chat"
-        }
-      ],
-      "wasm": [],
-      "assets": [],
-      "environments": {}
-    },
     "/api/analyze/route": {
       "files": [
         "server/middleware-build-manifest.js",
         "server/middleware-react-loadable-manifest.js",
         "server/next-font-manifest.js",
         "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
         "server/edge-runtime-webpack.js",
+        "server/edge-chunks/77.js",
         "server/app/api/analyze/route.js"
       ],
       "name": "app/api/analyze/route",
@@ -42,7 +23,38 @@
       ],
       "wasm": [],
       "assets": [],
-      "environments": {}
+      "environments": {
+        "previewModeId": "af012060439f561ca0e8a5821ca11523",
+        "previewModeSigningKey": "5a6856472d9c0fb6b4e1f9ad53bb3e4a106932d0fe0907896c7e2c24beee4673",
+        "previewModeEncryptionKey": "cfe410d02c70f1f6cc30f10e914c002571143aefe974ae52b126142dfe9a4a7b"
+      }
+    },
+    "/api/chat/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/77.js",
+        "server/app/api/chat/route.js"
+      ],
+      "name": "app/api/chat/route",
+      "page": "/api/chat/route",
+      "matchers": [
+        {
+          "regexp": "^/api/chat$",
+          "originalSource": "/api/chat"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "af012060439f561ca0e8a5821ca11523",
+        "previewModeSigningKey": "5a6856472d9c0fb6b4e1f9ad53bb3e4a106932d0fe0907896c7e2c24beee4673",
+        "previewModeEncryptionKey": "cfe410d02c70f1f6cc30f10e914c002571143aefe974ae52b126142dfe9a4a7b"
+      }
     }
   },
   "sortedMiddleware": []
