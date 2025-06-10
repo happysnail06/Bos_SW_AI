@@ -322,7 +322,16 @@ export default function DemoPage() {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen relative">
+      {isAnalyzing && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 animate-fade-in">
+          <div className="bg-white p-8 rounded-lg shadow-xl flex flex-col items-center space-y-4">
+            <Loader className="w-12 h-12 text-brand-blue animate-spin" />
+            <h3 className="text-xl font-semibold text-gray-800">분석 중입니다...</h3>
+            <p className="text-gray-600">AI가 대화 내용을 분석하고 있습니다. 잠시만 기다려주세요.</p>
+          </div>
+        </div>
+      )}
       <OverlayMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       <header className="bg-white shadow-sm sticky top-0 z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
