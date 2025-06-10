@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 10, 31, 68;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #ffffff;
+  font-family: theme('fontFamily.sans');
+}
+
+/* Add custom animation keyframes */
+@layer utilities {
+  @keyframes fade-in {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out forwards;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  /* Animation for JSON injection effect */
+  @keyframes json-inject {
+    0% { transform: translateX(-100px); opacity: 0; }
+    50% { transform: translateX(0); opacity: 1; } 
+    100% { transform: translateX(20px); opacity: 0; }
+  }
+  .animate-json-inject {
+    /* Adjust duration and timing as needed */
+    animation: json-inject 1.5s ease-in-out forwards;
+    /* Forwards keeps the final state (opacity: 0) */
+  }
+
+  /* Removed profile-inject animation */
+
+  /* Animation for log scrolling */
+  @keyframes log-scroll {
+    0% { transform: translateY(0); }
+    /* Move text block up by half its height (since we doubled the lines) */
+    100% { transform: translateY(-50%); }
+  }
+  .animate-log-scroll {
+    /* Use linear for smooth, continuous scroll. Adjust duration in component */
+    animation: log-scroll linear infinite;
+    animation-duration: 10s; /* Adjust speed */
+  }
+
+  /* Animation for bar chart growth */
+  @keyframes bar-grow {
+    0% { transform: scaleY(0); }
+    100% { transform: scaleY(1); }
+  }
+  .animate-bar-grow {
+     transform-origin: bottom;
+     animation: bar-grow 0.5s ease-out forwards;
+  }
+
+  /* Animation for pulsing opacity */
+  @keyframes pulse-opacity {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; } 
+  }
+  .animate-pulse-opacity {
+    animation: pulse-opacity 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+} 
