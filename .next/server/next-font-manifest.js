@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/happy/Desktop/MySpace/프로젝트/Bos_SWAI/app/layout\":[\"static/media/a34f9d1faa5f3315-s.p.woff2\",\"static/media/dcc209c0b1ab30af-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/happy/Desktop/MySpace/프로젝트/Bos_SWAI/src/app/layout\":[\"static/media/e4af272ccee01ff0-s.p.woff2\",\"static/media/6af6b543dd3be231-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
