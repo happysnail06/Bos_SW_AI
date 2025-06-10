@@ -682,7 +682,15 @@ export default function DemoPage() {
               <h2 className="text-3xl font-bold text-gray-800">4단계: 결과 분석</h2>
               <p className="text-lg text-gray-600 mt-2">시뮬레이션 결과를 종합적으로 분석하고 인사이트를 확인하세요.</p>
             </div>
-            {analysisResult ? (
+            {isAnalyzing ? (
+              <div className="text-center p-12 bg-white rounded-2xl shadow-sm border">
+                <div className="flex flex-col items-center space-y-4">
+                  <Loader className="w-12 h-12 text-brand-blue animate-spin" />
+                  <h3 className="text-xl font-semibold text-gray-800">결과 분석 중...</h3>
+                  <p className="text-gray-600">AI가 대화 내용을 분석하고 인사이트를 생성하고 있습니다.</p>
+                </div>
+              </div>
+            ) : analysisResult ? (
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Left Column: Conversation & Summary */}
                 <div className="lg:col-span-1 flex flex-col gap-8">
